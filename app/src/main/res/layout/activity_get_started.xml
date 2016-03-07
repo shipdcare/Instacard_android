@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.instacard.instacard.views.GetStartedActivity"
+    android:id="@+id/get_started_screen"
+    tools:ignore="MissingPrefix"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:src="@drawable/back"
+        android:scaleType="fitXY"
+        android:id="@+id/back"
+        android:adjustViewBounds="true"
+        android:layout_alignTop="@+id/viewpager"
+        android:layout_alignBottom="@+id/viewpager"
+        android:layout_alignLeft="@+id/viewpager"
+        android:layout_alignRight="@+id/viewpager" />
+
+    <android.support.v4.view.ViewPager
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpager"
+        android:layout_above="@+id/subhead"
+        android:layout_marginBottom="20dp">
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/subhead"
+        android:text = "Your loyalty app"
+        android:gravity="top|center_horizontal"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_above="@+id/indicator"
+        fontPath = "fonts/Graphik-Medium.otf"/>
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/indicator"
+        android:layout_above="@+id/get_started_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/get_started_layout"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="34dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log In with Facebook"
+            android:id="@+id/fb_login_button"
+            android:textColor="@color/white"
+            android:background="@color/com_facebook_button_background_color"
+            android:textAllCaps="false"
+            android:typeface="sans"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/not_post_text"
+            android:text="We do not post anything on facebook"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"/>
+
+
+</RelativeLayout>

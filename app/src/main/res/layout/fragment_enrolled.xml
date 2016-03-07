@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.instacard.instacard.views.EnrolledFragment"
+    android:background="@color/white">
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refreshRedeems"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/redeems_list"
+            android:background="@color/white"
+            android:layout_centerHorizontal="true"
+            android:dividerHeight="20dp"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:divider="@color/white"
+            android:scrollbars="none">
+        </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/empty"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No rewards yet"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rewards from your favorite stores will be listed here."
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:text="See places"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/see_places"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="invisible"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

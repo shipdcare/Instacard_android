@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.instacard.instacard">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".controllers.Instacard_"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".views.MainActivity_"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.GetStartedActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider925830744166315"
+            android:exported="true" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".views.SignupActivity_"
+            android:label="@string/title_activity_signup"
+            android:parentActivityName=".views.GetStartedActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.instacard.instacard.views.GetStartedActivity_" />
+        </activity>
+        <activity
+            android:name=".views.LoginActivity_"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".views.GetStartedActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.instacard.instacard.views.GetStartedActivity_" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyADD-CkX12G1dM60qconga4PvfO1J1VHHk" />
+
+        <activity
+            android:name=".views.WalletActivity_"
+            android:label="@string/title_activity_wallet"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".views.StoreActivity_"
+            android:label="@string/title_activity_store"
+            android:launchMode="singleTask"
+            android:parentActivityName=".views.MainActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.instacard.instacard.views.MainActivity_" />
+        </activity>
+        <activity
+            android:name=".views.SearchActivity_"
+            android:label="@string/title_activity_search"
+            android:parentActivityName=".views.MainActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.instacard.instacard.views.MainActivity_" />
+        </activity>
+        <activity
+            android:name=".views.RedeemActivity_"
+            android:label="@string/title_activity_redeem"
+            android:parentActivityName=".views.StoreActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.instacard.instacard.views.StoreActivity_" />
+        </activity>
+        <activity
+            android:name=".views.HistoryActivity_"
+            android:label="@string/title_activity_history"
+            android:parentActivityName=".views.MainActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.instacard.instacard.views.MainActivity_" />
+        </activity>
+        <activity
+            android:name=".views.AccountActivity_"
+            android:label="@string/title_activity_account"
+            android:parentActivityName=".views.MainActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.instacard.instacard.views.MainActivity_" />
+        </activity>
+        <activity
+            android:name=".views.PhoneActivity_"
+            android:label="@string/title_activity_phone"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".views.ReviewActivity_"
+            android:label="@string/title_activity_review"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="068fff3389eb0379bea803954c9e406c95f19dc1" />
+
+    </application>
+
+</manifest>

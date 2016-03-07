@@ -1,0 +1,96 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/login_layout"
+    android:visibility="visible"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#e27323dc"
+    android:paddingLeft="10dp"
+    android:paddingTop="25dp"
+    android:paddingBottom="15dp"
+    android:paddingRight="10dp"
+    android:minWidth="300dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/abc_action_button_min_width_material"
+                android:hint="Phone"
+                android:ems="8"
+                android:paddingLeft="10dp"
+                android:id="@+id/login_phone"
+                android:layout_marginBottom="3dp"
+                android:typeface="normal"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:theme="@style/Theme.App.Base"
+                android:textSize="16sp"
+                android:textColor="#000000">
+            </EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="8"
+                android:id="@+id/login_password"
+                android:paddingLeft="10dp"
+                android:hint="Password"
+                android:typeface="sans"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:background="#ffffff"
+                android:paddingBottom="10dp"
+                android:paddingTop="2dp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:id="@+id/login"
+            android:background="#e32a61"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:typeface="normal"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forgot your password?"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:typeface="sans" />
+
+</LinearLayout>

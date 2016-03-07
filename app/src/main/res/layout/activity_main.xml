@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="right">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel"
+            android:background="@color/white">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                app:tabTextColor="@color/black"
+                android:layout_alignParentLeft="true"
+                app:tabSelectedTextColor="@color/colorPrimary"
+                app:tabIndicatorColor="@color/colorPrimary"
+                android:padding="0dp"
+                app:tabMinWidth="65dp"
+                android:background="@color/white"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:src="@drawable/toolbar_settings"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:id="@+id/show_nav"/>
+
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rel" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_drawer"
+        app:menu="@menu/main_drawer"
+        android:background="@color/white"/>
+
+</android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

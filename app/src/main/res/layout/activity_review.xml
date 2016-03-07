@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="in.instacard.instacard.views.ReviewActivity"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Your visit"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        tools:src = "@drawable/ic_home_color"
+        android:id="@+id/store_logo"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/store_logo"
+        android:layout_marginTop="10dp"
+        tools:text = "Awesome restaurant"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:id="@+id/store_name"
+        android:textSize="16sp"
+        fontPath= "fonts/Graphik-Medium.otf"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/line3"
+            android:background="@color/light"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/summary"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true">
+        </View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summary"
+            android:background="@color/white"
+            android:gravity="center"
+            android:id="@+id/summary"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/light"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/line4"
+            android:background="@color/light"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/summary"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true">
+        </View>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text = "Rs. 160"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/bill_details" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16 points were added to your account"
+        android:id="@+id/point_details"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/line5"
+            android:background="@color/light"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/review"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true">
+        </View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Review"
+            android:background="@color/white"
+            android:gravity="center"
+            android:id="@+id/review"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/light"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/line6"
+            android:background="@color/light"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/review"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true">
+        </View>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Comment (optional)"
+            android:gravity="left"
+            android:textSize="14sp"
+            android:ems="12"
+            android:lines="3"
+            android:background="@color/white"
+            android:id="@+id/comment" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@+id/submit" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/submit"
+            android:textColor="@color/white"
+            android:text="Submit"
+            android:background="@color/colorPrimary"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_alignTop="@+id/submit"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
